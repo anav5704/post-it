@@ -8,7 +8,7 @@ const Nav = async () => {
     const session = await getServerSession(authOptions)
 
   return (
-    <nav className="bg-neutral-900 p-3 mt-5 rounded-sm flex justify-between items-center">
+    <nav className="bg-neutral-900 p-3 my-5 rounded-sm flex justify-between items-center">
         <Link href={"/"}>
             <h1 className="text-lg font-bold">Post It! 💜</h1>
         </Link>

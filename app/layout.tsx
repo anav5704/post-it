@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
+import QueryWrapper from "./auth/QueryWrapper";
 import Nav from "./auth/Nav";
 import "./globals.css";
 
@@ -14,8 +15,10 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
     return (
         <html lang="en">
             <body className={`${rubik.className} mx-4 md:mx-48 bg-neutral-950 text-white`}>
-                <Nav />
-                {children}
+                <QueryWrapper>
+                    <Nav />
+                    {children}
+                </QueryWrapper>
             </body>
         </html>
     );
